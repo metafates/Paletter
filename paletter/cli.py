@@ -32,4 +32,10 @@ parser.add_argument(
     default=1.5
 )
 
+parser.add_argument(
+    '--no-squares',
+    help='Do not draw squares on color blocks',
+    action='store_false'
+)
+
 args = parser.parse_args()
