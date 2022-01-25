@@ -33,7 +33,7 @@ def contrast(a: RGB, b: RGB) -> float:
 def palette(image_path: str, color_count: int = config.COLORS) -> list[RGB]:
     '''Build a color palette'''
     thief = ColorThief(image_path)
-    return thief.get_palette(
-        color_count=color_count + config.PALETTE_SHIFT,
-        quality=9
-    )[config.PALETTE_SHIFT:]
+    primary = thief.get_color(quality=1)
+    palette = thief.get_palette(50)
+    # throw out colors similar to the primary color
+    return list(filter(lambda c: contrast(primary, c) > config.CONTRAST_RATIO, palette))[:color_count]

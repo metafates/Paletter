@@ -13,7 +13,7 @@ parser.add_argument(
 
 parser.add_argument(
     '--out',
-    help='Generated image name (without extension)',
+    help='Generated image path (without extension)',
     type=str,
     default='out'
 )
@@ -22,14 +22,14 @@ parser.add_argument(
     '--colors',
     help='Number of colors in the palette',
     type=int,
-    default=8
+    default=7
 )
 
 parser.add_argument(
-    '--shift',
-    help='How many colors to shift the palette by',
-    type=int,
-    default=0
+    '--contrast',
+    help='Minimum contrast ratio between primary color and colors in palette',
+    type=float,
+    default=1.5
 )
 
 args = parser.parse_args()

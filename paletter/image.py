@@ -30,7 +30,7 @@ def add_color_blocks(
     pallette: list[RGB]
 ) -> Image.Image:
     w, h = image.size
-    block_size = (int(w / (config.COLORS * 1.5)), int(h * 0.85))
+    block_size = (int(w / (config.COLORS * 1.7)), int(h * 0.85))
     blocks_combined_width = block_size[0] * len(pallette)
     combined_width_with_gaps = blocks_combined_width + \
         config.GAP * (len(pallette) - 1)

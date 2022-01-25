@@ -7,9 +7,11 @@ import os
 
 def generate(image_path: str, out_path: str) -> None:
     try:
-        print('Getting color palette (this may take a while)')
+        print('Working with colors (this may take a while)')
         primary = colors.primary(image_path)
         palette = colors.palette(image_path)
+        assert len(palette) == config.COLORS, 'Contrast ratio cannot be satisfied'
+
         most_contrasting = max(
             palette, key=lambda c: colors.contrast(primary, c))
 
@@ -22,8 +24,8 @@ def generate(image_path: str, out_path: str) -> None:
         out.save(out_path)
 
         print(f'Done! Saved at {out_path}')
-    except Exception:
-        print(Exception)
+    except Exception as e:
+        print(f'Error! {e}')
 
 
 def main():
