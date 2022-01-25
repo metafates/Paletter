@@ -11,4 +11,25 @@ parser.add_argument(
     type=str
 )
 
+parser.add_argument(
+    '--out',
+    help='Generated image name (without extension)',
+    type=str,
+    default='out'
+)
+
+parser.add_argument(
+    '--colors',
+    help='Number of colors in the palette',
+    type=int,
+    default=8
+)
+
+parser.add_argument(
+    '--shift',
+    help='How many colors to shift the palette by',
+    type=int,
+    default=0
+)
+
 args = parser.parse_args()
