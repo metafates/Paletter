@@ -42,7 +42,7 @@ This will create an executable at `dist/paletter`
 ```
 usage: paletter.py [-h] [--out OUT] [--colors COLORS] [--contrast CONTRAST] [--no-shapes] [--no-border]
                    [--shape-size SHAPE_SIZE] [--shape SHAPE] [--border-width BORDER_WIDTH] [--blocks-gap BLOCKS_GAP]
-                   [--shapes-gap SHAPES_GAP] [--resolution RESOLUTION] [--scale SCALE]
+                   [--shapes-gap SHAPES_GAP] [--shapes-per-row SHAPES_PER_ROW] [--resolution RESOLUTION] [--scale SCALE]
                    image
 
 Generates color palette from image
@@ -66,6 +66,8 @@ options:
                         Gap between color blocks in pixels. Default is 90
   --shapes-gap SHAPES_GAP
                         Gap between shapes inside color blocks. Default is 15
+  --shapes-per-row SHAPES_PER_ROW
+                        Shapes per row. Default is 3
   --resolution RESOLUTION
                         Image resolution. Default is 1920x1080
   --scale SCALE         Image scaling. Default is 1
