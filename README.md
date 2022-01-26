@@ -1,19 +1,19 @@
-# Paletter
+# 🎨 **Paletter**
 
-Generates images with color palette from provided picture
+Generates images with color palette from provided picture. You can use them as wallpapers or some fancy backgrounds
 
-## Examples
+## 🌄 Examples
 
 ![Example 1](examples/example1.png)
 ![Example 2](examples/example2.png)
 ![Example 3](examples/example3.png)
 
-## Dependencies
+## 📦 Dependencies
 
 -   Python 3.9+
 -   Poetry
 
-## Install
+## 🛠 Install
 
 Clone this repo and install dependencies
 
@@ -37,7 +37,7 @@ poetry run pyinstaller --onefile --paths paletter paletter/paletter.py
 
 This will create an executable at `dist/paletter`
 
-## Usage
+## 📝 Usage
 
 ```
 usage: main.py [-h] [--out OUT] [--colors COLORS] [--contrast CONTRAST] [--no-squares] [--no-border] image
