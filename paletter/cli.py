@@ -58,4 +58,39 @@ parser.add_argument(
     default='square'
 )
 
+parser.add_argument(
+    '--border-width',
+    help='Border width in pixels. Default 15',
+    type=int,
+    default=15
+)
+
+parser.add_argument(
+    '--blocks-gap',
+    help='Gap between color blocks in pixels. Default is 90',
+    type=int,
+    default=90
+)
+
+parser.add_argument(
+    '--shapes-gap',
+    help='Gap between shapes inside color blocks. Default is 15',
+    type=int,
+    default=15
+)
+
+parser.add_argument(
+    '--resolution',
+    help='Image resolution. Default is 1920x1080',
+    type=str,
+    default='1920x1080'
+)
+
+parser.add_argument(
+    '--scale',
+    help='Image scaling. Default is 1',
+    type=float,
+    default=1
+)
+
 args = parser.parse_args()
