@@ -1,6 +1,6 @@
 # Paletter
 
-Generates image with color palette from provided picture
+Generates images with color palette from provided picture
 
 ## Examples
 
