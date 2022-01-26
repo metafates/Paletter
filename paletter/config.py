@@ -7,5 +7,5 @@ BORDER_WIDTH = 15  # px
 COLORS: int = args.colors  # color count
 GAP = 90  # px
 CONTRAST_RATIO: float = args.contrast
-SQUARES_GAP = 15
+SQUARES_GAP = 15  # px
 SQUARES: bool = args.no_squares

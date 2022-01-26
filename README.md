@@ -11,7 +11,31 @@ Generates images with color palette from provided picture
 ## Dependencies
 
 -   Python 3.9+
--   colorthief
+-   Poetry
+
+## Install
+
+Clone this repo and install dependencies
+
+```bash
+git clone https://github.com/metafates/Paletter.git
+cd Paletter
+poetry install
+```
+
+Then you can run the script by running
+
+```bash
+poetry run python paletter/paletter.py
+```
+
+Or you can build an executable with
+
+```bash
+poetry run pyinstaller --onefile --paths paletter paletter/paletter.py
+```
+
+This will create an executable at `dist/paletter`
 
 ## Usage
 
