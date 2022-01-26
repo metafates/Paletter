@@ -40,18 +40,23 @@ This will create an executable at `dist/paletter`
 ## 📝 Usage
 
 ```
-usage: paletter.py [-h] [--out OUT] [--colors COLORS] [--contrast CONTRAST] [--no-squares] [--no-border] image
+usage: paletter.py [-h] [--out OUT] [--colors COLORS] [--contrast CONTRAST] [--no-shapes] [--no-border]
+                   [--shape-size SHAPE_SIZE] [--shape SHAPE]
+                   image
 
 Generates color palette from image
 
 positional arguments:
-  image                Image to work with
+  image                 Image to work with
 
 options:
-  -h, --help           show this help message and exit
-  --out OUT            Generated image path (without extension)
-  --colors COLORS      Number of colors in the palette
-  --contrast CONTRAST  Minimum contrast ratio between primary color and colors in palette
-  --no-squares         Do not draw squares on the color blocks
-  --no-border          Do not add border to the image
+  -h, --help            show this help message and exit
+  --out OUT             Generated image path (without extension)
+  --colors COLORS       Number of colors in the palette
+  --contrast CONTRAST   Minimum contrast ratio between primary color and colors in palette
+  --no-shapes           Do not draw shapes on the color blocks
+  --no-border           Do not add border to the image
+  --shape-size SHAPE_SIZE
+                        Shapes size. Valid options are small, medium and large. Default is small
+  --shape SHAPE         Decoration shape on the color block. Valid options are square and circle. Default is square
 ```

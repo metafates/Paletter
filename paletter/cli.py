@@ -33,8 +33,8 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    '--no-squares',
-    help='Do not draw squares on the color blocks',
+    '--no-shapes',
+    help='Do not draw shapes on the color blocks',
     action='store_false'
 )
 
@@ -45,10 +45,17 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    '--squares-size',
-    help='Squares size. Valid options are small, medium and large. Default is small',
+    '--shape-size',
+    help='Shapes size. Valid options are small, medium and large. Default is small',
     type=str,
     default='small'
+)
+
+parser.add_argument(
+    '--shape',
+    help='Decoration shape on the color block. Valid options are square and circle. Default is square',
+    type=str,
+    default='square'
 )
 
 args = parser.parse_args()

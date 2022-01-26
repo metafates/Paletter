@@ -1,6 +1,6 @@
 from typing import Literal
 from type_aliases import RGB, RGBA, Size
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, ImageDraw
 import config
 
 
@@ -22,8 +22,8 @@ def color_block(
     '''Generates a color block'''
     # Todo: add squares
     block = blank(size, color)
-    if config.SQUARES:
-        match config.SQUARES_SIZE:
+    if config.SHAPES:
+        match config.SHAPES_SIZE:
             case "small":
                 multiplier = 0.1
             case "medium":
@@ -31,10 +31,11 @@ def color_block(
             case "big":
                 multiplier = 0.2
 
-        squares_ = squares(int(size[0] * multiplier), palette, bgFIX=color)
-        block.paste(squares_, (
-            (block.width - squares_.width) // 2,
-            (block.height - squares_.height) // 2
+        shapes = decoration_shapes(
+            int(size[0] * multiplier), palette, bgFIX=color)
+        block.paste(shapes, (
+            (block.width - shapes.width) // 2,
+            (block.height - shapes.height) // 2
         ))
     return block
 
@@ -71,14 +72,14 @@ def apply_borders(
 
 
 # ? For some reason PIL does not create a transparent image. Use bgFIX to hide wrapper
-def squares(
+def decoration_shapes(
     side: int,
     palette: list[RGB],
     bgFIX: RGB,
     count: int = 3
 ) -> Image.Image:
     '''Generates squares'''
-    gapX = config.SQUARES_GAP
+    gapX = config.SHAPES_GAP
     gapY = gapX * 2
     colors = len(palette) * 2
     overall_width = side * count + gapX * (count - 1)
@@ -90,13 +91,16 @@ def squares(
     for color in palette:
         doubled_palette.extend([color, color])
 
+    draw = ImageDraw.Draw(wrapper)
+
     for i, color in enumerate(doubled_palette):
-        square = blank((side, side), color)
         for j in range(count):
-            square_coords = (
-                (side + gapX) * j,
-                (side + gapY) * i
-            )
-            wrapper.paste(square, square_coords)
+            x = (side + gapX) * j
+            y = (side + gapY) * i
+            if config.SHAPE == 'circle':
+                draw.ellipse((x, y, x+side, y+side), color)
+            else:
+                square = blank((side, side), color)
+                wrapper.paste(square, (x, y))
 
     return wrapper
