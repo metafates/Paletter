@@ -1,6 +1,6 @@
 # 🎨 **Paletter**
 
-Generates images with color palette from provided picture. You can use them as wallpapers or some fancy backgrounds
+Generate images with a color palette from the provided picture. You can use them as wallpapers or some fancy backgrounds 🧑‍🎨
 
 ## 🌄 Examples
 
