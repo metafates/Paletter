@@ -91,8 +91,8 @@ def squares(
         doubled_palette.extend([color, color])
 
     for i, color in enumerate(doubled_palette):
+        square = blank((side, side), color)
         for j in range(count):
-            square = blank((side, side), color)
             square_coords = (
                 (side + gapX) * j,
                 (side + gapY) * i
