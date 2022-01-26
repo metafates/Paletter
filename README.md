@@ -8,7 +8,7 @@ Generate images with a color palette from the provided picture. You can use them
 ![Example 2](examples/example2.png)
 ![Example 3](examples/example3.png)
 
-## 📦 Dependencies
+## 📦 Requirements
 
 -   Python 3.9+
 -   Poetry
