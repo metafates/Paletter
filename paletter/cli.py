@@ -1,7 +1,7 @@
 import argparse
 
 parser = argparse.ArgumentParser(
-    prog='Paletter',
+    prog='main.py',
     description="Generates color palette from image"
 )
 
@@ -34,7 +34,7 @@ parser.add_argument(
 
 parser.add_argument(
     '--no-squares',
-    help='Do not draw squares on color blocks',
+    help='Do not draw squares on the color blocks',
     action='store_false'
 )
 
