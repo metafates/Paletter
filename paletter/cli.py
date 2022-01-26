@@ -38,4 +38,10 @@ parser.add_argument(
     action='store_false'
 )
 
+parser.add_argument(
+    '--no-border',
+    help='Do not add border to the image',
+    action='store_false'
+)
+
 args = parser.parse_args()

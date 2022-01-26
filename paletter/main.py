@@ -11,14 +11,15 @@ def generate(image_path: str, out_path: str) -> None:
         primary = colors.primary(image_path)
         palette = colors.palette(image_path)
         assert len(palette) == config.COLORS, 'Contrast ratio cannot be satisfied'
-
         most_contrasting = max(
             palette, key=lambda c: colors.contrast(primary, c))
 
         print('Generating image')
         blank = image.blank(config.SIZE, primary)
         out = image.add_color_blocks(blank, palette)
-        out = image.apply_borders(out, config.BORDER, most_contrasting)
+        if config.BORDER:
+            out = image.apply_borders(
+                out, config.BORDER_WIDTH, most_contrasting)
 
         print('Saving')
         out.save(out_path)

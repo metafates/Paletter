@@ -16,7 +16,7 @@ Generates images with color palette from provided picture
 ## Usage
 
 ```
-usage: main.py [-h] [--out OUT] [--colors COLORS] [--contrast CONTRAST] [--no-squares] image
+usage: main.py [-h] [--out OUT] [--colors COLORS] [--contrast CONTRAST] [--no-squares] [--no-border] image
 
 Generates color palette from image
 
@@ -27,7 +27,7 @@ options:
   -h, --help           show this help message and exit
   --out OUT            Generated image path (without extension)
   --colors COLORS      Number of colors in the palette
-  --contrast CONTRAST  Minimum contrast ratio between primary color and colors
-                       in palette
+  --contrast CONTRAST  Minimum contrast ratio between primary color and colors in palette
   --no-squares         Do not draw squares on the color blocks
+  --no-border          Do not add border to the image
 ```
