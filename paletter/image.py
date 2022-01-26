@@ -78,7 +78,7 @@ def decoration_shapes(
     bgFIX: RGB,
     count: int = 3
 ) -> Image.Image:
-    '''Generates squares'''
+    '''Generates shapes'''
     gapX = config.SHAPES_GAP
     gapY = gapX * 2
     colors = len(palette) * 2
