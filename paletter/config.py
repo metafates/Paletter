@@ -1,4 +1,4 @@
-from type_aliases import Size
+from type_aliases import Size, SquaresSize
 from cli import args
 
 SIZE: Size = (1920, 1080)  # Generated image dimensions in px
@@ -9,3 +9,4 @@ GAP = 90  # px
 CONTRAST_RATIO: float = args.contrast
 SQUARES_GAP = 15  # px
 SQUARES: bool = args.no_squares
+SQUARES_SIZE: SquaresSize = args.squares_size

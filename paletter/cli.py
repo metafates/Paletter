@@ -44,4 +44,11 @@ parser.add_argument(
     action='store_false'
 )
 
+parser.add_argument(
+    '--squares-size',
+    help='Squares size. Valid options are small, medium and large. Default is small',
+    type=str,
+    default='small'
+)
+
 args = parser.parse_args()

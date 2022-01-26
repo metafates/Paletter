@@ -23,7 +23,15 @@ def color_block(
     # Todo: add squares
     block = blank(size, color)
     if config.SQUARES:
-        squares_ = squares(int(size[0] * 0.2), palette, bgFIX=color)
+        match config.SQUARES_SIZE:
+            case "small":
+                multiplier = 0.1
+            case "medium":
+                multiplier = 0.15
+            case "big":
+                multiplier = 0.2
+
+        squares_ = squares(int(size[0] * multiplier), palette, bgFIX=color)
         block.paste(squares_, (
             (block.width - squares_.width) // 2,
             (block.height - squares_.height) // 2
