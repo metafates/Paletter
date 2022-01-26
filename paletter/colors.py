@@ -17,8 +17,7 @@ def luminance(color: RGB) -> float:
             return c_ / 12.92
         return ((c_ + 0.055) / 1.055) ** 2.4
 
-    color_ = map(f, color)
-    r, g, b = color_
+    r, g, b = map(f, color)
     return r * 0.2126 + g * 0.7152 + b * 0.0722
 
 
