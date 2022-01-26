@@ -40,7 +40,7 @@ This will create an executable at `dist/paletter`
 ## 📝 Usage
 
 ```
-usage: main.py [-h] [--out OUT] [--colors COLORS] [--contrast CONTRAST] [--no-squares] [--no-border] image
+usage: paletter.py [-h] [--out OUT] [--colors COLORS] [--contrast CONTRAST] [--no-squares] [--no-border] image
 
 Generates color palette from image
 
