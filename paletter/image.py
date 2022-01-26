@@ -32,7 +32,7 @@ def color_block(
                 multiplier = 0.2
 
         shapes = decoration_shapes(
-            int(size[0] * multiplier), palette, bgFIX=color)
+            int(size[0] * multiplier), palette, bgFIX=color, count=config.SHAPES_PER_ROW)
         block.paste(shapes, (
             (block.width - shapes.width) // 2,
             (block.height - shapes.height) // 2
@@ -76,7 +76,7 @@ def decoration_shapes(
     side: int,
     palette: list[RGB],
     bgFIX: RGB,
-    count: int = 3
+    count: int
 ) -> Image.Image:
     '''Generates shapes'''
     gapX = config.SHAPES_GAP

@@ -19,3 +19,4 @@ SHAPES_GAP = int(args.shapes_gap * _MULTIPLIER)  # px
 SHAPES: bool = args.no_shapes
 SHAPES_SIZE: ShapeSize = args.shape_size
 SHAPE: Shape = args.shape
+SHAPES_PER_ROW: int = args.shapes_per_row

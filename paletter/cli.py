@@ -80,6 +80,13 @@ parser.add_argument(
 )
 
 parser.add_argument(
+    '--shapes-per-row',
+    help='Shapes per row. Default is 3',
+    type=int,
+    default=3
+)
+
+parser.add_argument(
     '--resolution',
     help='Image resolution. Default is 1920x1080',
     type=str,
