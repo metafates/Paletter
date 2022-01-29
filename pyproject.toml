@@ -8,6 +8,7 @@ authors = ["Lain <vvz.dev@gmail.com>"]
 python = "~3.10"
 colorthief = "^0.2.1"
 Pillow = "^9.0.0"
+sty = "^1.0.0-rc.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

@@ -25,6 +25,7 @@ def generate(image_path: str, out_path: str) -> None:
         out.save(out_path)
 
         print(f'Done! Saved at {out_path}')
+        colors.print_palette(palette)
     except Exception as e:
         print(f'Error! {e}')
 

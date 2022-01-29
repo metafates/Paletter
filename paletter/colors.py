@@ -1,6 +1,22 @@
 from colorthief import ColorThief
 from type_aliases import RGB
 import config
+from sty import bg, fg, rs
+
+
+def print_palette(pal: list[RGB]) -> None:
+    for color in pal:
+        r, g, b = color
+        r_, g_, b_ = max(pal, key=lambda c: contrast(color, c))
+        hex_color = rgb_to_hex(color)
+        output = fg(r_, g_, b_) + bg(r, g, b) + f' {hex_color} ' + rs.all
+        print(output, end='')
+    print()
+
+
+def rgb_to_hex(color: RGB) -> str:
+    r, g, b = color
+    return f'#{r:02x}{g:02x}{b:02x}'.upper()
 
 
 def primary(image_path: str) -> RGB:

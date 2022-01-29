@@ -212,6 +212,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "sty"
+version = "1.0.0rc2"
+description = "String styling for your terminal"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -230,7 +238,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.10"
-content-hash = "4388d11d32cfc704e27a9bdc062b76bfb9ec9ca3da49c8d0edf3ad63e0667414"
+content-hash = "e7f96bd633fb8dc6ba9ab0bbb79d90fa12b81e84ae2ae28250103ed40153ff4e"
 
 [metadata.files]
 altgraph = [
@@ -349,6 +357,9 @@ pytest = [
 pywin32-ctypes = [
     {file = "pywin32-ctypes-0.2.0.tar.gz", hash = "sha256:24ffc3b341d457d48e8922352130cf2644024a4ff09762a2261fd34c36ee5942"},
     {file = "pywin32_ctypes-0.2.0-py2.py3-none-any.whl", hash = "sha256:9dc2d991b3479cc2df15930958b674a48a227d5361d413827a4cfd0b5876fc98"},
+]
+sty = [
+    {file = "sty-1.0.0rc2-py3-none-any.whl", hash = "sha256:d811703ff450170b08fe4410caf052d6139df8d9e1d8f35694c212e14ffe5851"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
